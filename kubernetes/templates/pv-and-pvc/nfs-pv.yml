@@ -4,10 +4,10 @@ metadata:
   name: nfs
 spec:
   capacity:
-    storage: 500Mi
+    storage: 50Gi
   accessModes:
     - ReadWriteMany
   storageClassName: nfs
   nfs:
-    server: 192.168.1.7
-    path: "/srv/nfs"
+    server: 10.10.50.30
+    path: "/mnt/nfs-share/"
