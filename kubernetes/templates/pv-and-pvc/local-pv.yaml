@@ -10,3 +10,19 @@ spec:
   storageClassName: local-storage
   local:
     path: /data/test
+
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: test-local-pv
+  labels:
+    type: local
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteMany
+  hostPath:
+    path: "/data/test"
