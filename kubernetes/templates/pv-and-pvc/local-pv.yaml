@@ -7,7 +7,6 @@ spec:
     storage: 10Gi
   accessModes:
   - ReadWriteMany
-  persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
   local:
-    path: /data/volumes/pv1
+    path: /data/test
