@@ -10,3 +10,17 @@ spec:
   nfs:
     server: servernameorIP
     path: "/the/exported/path"
+
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: jenkins
+spec:
+  capacity:
+    storage: 25Gi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: 10.10.50.3
+    path: "/mnt/data/jenkins"
