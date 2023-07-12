@@ -1,24 +1,13 @@
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: test-pvc
-spec:
-  accessModes:
-  - ReadWriteMany
-  storageClassName: local-storage
-  resources:
-    requests:
-      storage: 10Gi
-
-
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: test-pvc
+  name:  my-pvc
 spec:
-  storageClassName: local-storage
+  volumeName: my-nfs-pv
   accessModes:
     - ReadWriteMany
+  storageClassName: ""
   resources:
     requests:
-      storage: 10Gi
+      storage: 5Gi
+
